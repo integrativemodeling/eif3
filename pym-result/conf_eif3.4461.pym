@@ -1,0 +1,102 @@
+from pymol.cgo import *
+from pymol import cmd
+from pymol.vfont import plain
+data= {}
+curdata= []
+k= 'ProteinA geometry'
+if not k in data.keys():
+   data[k]=[]
+curdata=[
+COLOR, 0.65098, 0.807843, 0.890196,
+SPHERE, 222.731, 71.1351, 74.039, 35.0398,
+COLOR, 0.65098, 0.807843, 0.890196,
+SPHERE, 190.379, 67.3678, 114.349, 23.4259,
+COLOR, 0.65098, 0.807843, 0.890196,
+SPHERE, 180.553, 111.133, 145.072, 37.5602,
+]
+k= 'ProteinA geometry'
+if k in data.keys():
+  data[k]= data[k]+curdata
+else:
+  data[k]= curdata
+
+k= 'ProteinB geometry'
+if not k in data.keys():
+   data[k]=[]
+curdata=[
+COLOR, 0.121569, 0.470588, 0.705882,
+SPHERE, 229.75, 121.824, 159.732, 21.5227,
+COLOR, 0.121569, 0.470588, 0.705882,
+SPHERE, 219.553, 159.584, 133.484, 32.0928,
+COLOR, 0.121569, 0.470588, 0.705882,
+SPHERE, 237.909, 106.523, 117.435, 32.6764,
+]
+k= 'ProteinB geometry'
+if k in data.keys():
+  data[k]= data[k]+curdata
+else:
+  data[k]= curdata
+
+k= 'ProteinC geometry'
+if not k in data.keys():
+   data[k]=[]
+curdata=[
+COLOR, 0.698039, 0.87451, 0.541176,
+SPHERE, 197.141, 110.072, 98.1641, 18.8185,
+COLOR, 0.698039, 0.87451, 0.541176,
+SPHERE, 196.666, 129.271, 56.8127, 33.3973,
+COLOR, 0.698039, 0.87451, 0.541176,
+SPHERE, 187.217, 150.119, 104.276, 26.0007,
+]
+k= 'ProteinC geometry'
+if k in data.keys():
+  data[k]= data[k]+curdata
+else:
+  data[k]= curdata
+
+k= 'ProteinI geometry'
+if not k in data.keys():
+   data[k]=[]
+curdata=[
+COLOR, 0.2, 0.627451, 0.172549,
+SPHERE, 161.785, 168.721, 151.488, 29.9103,
+]
+k= 'ProteinI geometry'
+if k in data.keys():
+  data[k]= data[k]+curdata
+else:
+  data[k]= curdata
+
+k= 'ProteinG geometry'
+if not k in data.keys():
+   data[k]=[]
+curdata=[
+COLOR, 0.984314, 0.603922, 0.6,
+SPHERE, 121.964, 138.475, 158.367, 27.1162,
+COLOR, 0.984314, 0.603922, 0.6,
+SPHERE, 115.423, 148.614, 118.335, 21.3322,
+]
+k= 'ProteinG geometry'
+if k in data.keys():
+  data[k]= data[k]+curdata
+else:
+  data[k]= curdata
+
+k= 'Protein5 geometry'
+if not k in data.keys():
+   data[k]=[]
+curdata=[
+COLOR, 0.890196, 0.101961, 0.109804,
+SPHERE, 233.953, 108.601, 117.187, 29.6141,
+COLOR, 0.890196, 0.101961, 0.109804,
+SPHERE, 218.248, 149.105, 134.662, 23.8945,
+]
+k= 'Protein5 geometry'
+if k in data.keys():
+  data[k]= data[k]+curdata
+else:
+  data[k]= curdata
+
+for k in data.keys():
+  cmd.load_cgo(data[k], k, 1)
+data= {}
