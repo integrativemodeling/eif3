@@ -17,7 +17,7 @@ o	MODELS: Generated models
 
 DATA:
  Generation and optimization of structural models
-Script name: ms-cg.py
+Script name: ms-cg-testCaseName.py
 Input Fields:
 •	Proteins in the system 
 The input proteins, defined as a coarse grained format, are given the code as follows:
@@ -61,7 +61,7 @@ CSV Format:
 •	Score: MS connectivity restraint. The produced score for each solution generated is calculated using the Minimal Spanning Tree (MST) algorithm
 
 Usage:  To run the sampling script you should first specify the above 
-usage: python sampling.py  
+usage: python ms-cg-testCaseName.py  
 
 Visualization of generated structures:
 The produced structures are generated as *.pym type of file to be readily displayed in Pymol visualization programme. 
