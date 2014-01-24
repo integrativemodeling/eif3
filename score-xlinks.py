@@ -107,8 +107,7 @@ list7 = []
 listNames=[]
 ##Read input file
 for i in range(NA, NB):
-       #InputFileName="module1_20k_15Dec."+str(i)+".mfj"
-       InputFileName="models_rpt4-5-3."+str(i)+".mfj"
+       InputFileName="conf_eif3."+str(i)+".mfj"
        def ReadFile(InputFile):
               InputFile = open(InputFileName,'r') # Open file to read
               InputFileLines = InputFile.read().splitlines() # string of lines from pdb file
