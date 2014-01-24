@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
 import unittest
+import subprocess
 import os
+import sys
 import glob
 
 class Tests(unittest.TestCase):
