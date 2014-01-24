@@ -6,10 +6,12 @@ import os
 import sys
 import glob
 
+TOPDIR = os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]), '..'))
+
 class Tests(unittest.TestCase):
     def test_run(self):
         """Test full run"""
-        os.chdir(os.path.join(os.path.dirname(sys.argv[0]), '..'))
+        os.chdir(TOPDIR)
         # Test modeling script
         p = subprocess.check_call(['./ms_cg.py'])
         # Make sure models were produced
