@@ -13,10 +13,10 @@ class Tests(unittest.TestCase):
         """Test full run"""
         os.chdir(TOPDIR)
         # Test modeling script
-        p = subprocess.check_call(['./ms_cg.py'])
+        p = subprocess.check_call(['./ms_cg.py', '--test'])
         # Make sure models were produced
         num = len(glob.glob('conf_eif3.*.pym'))
-        self.assert_(num > 9900, "Only %d models were produced" % num)
+        self.assert_(num > 8, "Only %d models were produced" % num)
         # Make mfj files
         p = subprocess.check_call(['./pym2tcl.py'])
         p = subprocess.check_call(['./tcl2mfj.py'])

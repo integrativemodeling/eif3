@@ -6,7 +6,13 @@ import IMP.atom
 import IMP.container
 import IMP.display
 import IMP.statistics
+import sys
 #import IMP.example
+
+# Number of models to generate
+NMODELS = 10000
+if '--test' in sys.argv:
+    NMODELS = 10
 
 # the spring constant to use, it doesn't really matter
 k = 100
@@ -294,7 +300,7 @@ def get_conformations(m):
     # things to work
     sampler.set_number_of_conjugate_gradient_steps(250)
     sampler.set_number_of_monte_carlo_steps(50)
-    sampler.set_number_of_attempts(10000)
+    sampler.set_number_of_attempts(NMODELS)
     # We don't care to see the output from the sampler
     sampler.set_log_level(IMP.SILENT)
 
