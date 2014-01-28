@@ -37,6 +37,8 @@ def create_representation():
     def create_protein(name, ds):
         h = IMP.atom.create_protein(m, name, resolution, ds)
         leaves = IMP.atom.get_leaves(h)
+        for l in leaves:
+            IMP.core.XYZ(l).set_coordinates_are_optimized(True)
         # for convenience, have one molecular hierarchy containing all
         # molecules
         all.add_child(h)
