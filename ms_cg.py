@@ -312,7 +312,7 @@ def get_conformations(m):
 
     # return the IMP.ConfigurationSet storing all the found configurations that
     # meet the various restraint maximum scores.
-    cs = sampler.get_sample()
+    cs = sampler.create_sample()
     return cs
 
 # cluster the conformations and write them to a file
