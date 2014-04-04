@@ -12,7 +12,7 @@ import sys
 # Number of models to generate
 NMODELS = 10000
 if '--test' in sys.argv:
-    NMODELS = 10
+    NMODELS = 100
 
 # the spring constant to use, it doesn't really matter
 k = 100
