@@ -228,73 +228,73 @@ def create_restraints(m, all):
     add_connectivity_restraint([sA, sB, sC, sI, sG, s5])
 
 #   Intra Distances
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(0, 820)]), S(
-        hierarchy=all, molecule="ProteinA", residue_indexes=[(820, 1065)]))  # A3-B1
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(820, 1065)]), S(
-        hierarchy=all, molecule="ProteinA", residue_indexes=[(1065, 2075)]))  # A3-B1
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=range(0, 820)), S(
+        hierarchy=all, molecule="ProteinA", residue_indexes=range(820, 1065)))  # A3-B1
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=range(820, 1065)), S(
+        hierarchy=all, molecule="ProteinA", residue_indexes=range(1065, 2075)))  # A3-B1
 
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=[(0, 190)]), S(
-        hierarchy=all, molecule="ProteinB", residue_indexes=[(190, 820)]))  # A3-B1
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=[(190, 820)]), S(
-        hierarchy=all, molecule="ProteinB", residue_indexes=[(820, 1485)]))  # A3-B1
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=range(0, 190)), S(
+        hierarchy=all, molecule="ProteinB", residue_indexes=range(190, 820)))  # A3-B1
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=range(190, 820)), S(
+        hierarchy=all, molecule="ProteinB", residue_indexes=range(820, 1485)))  # A3-B1
 
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinC", residue_indexes=[(0, 127)]), S(
-        hierarchy=all, molecule="ProteinC", residue_indexes=[(127, 837)]))  # A3-B1
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinC", residue_indexes=[(127, 837)]), S(
-        hierarchy=all, molecule="ProteinC", residue_indexes=[(837, 1172)]))  # A3-B1
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinC", residue_indexes=range(0, 127)), S(
+        hierarchy=all, molecule="ProteinC", residue_indexes=range(127, 837)))  # A3-B1
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinC", residue_indexes=range(127, 837)), S(
+        hierarchy=all, molecule="ProteinC", residue_indexes=range(837, 1172)))  # A3-B1
 
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinG", residue_indexes=[(0, 380)]), S(
-        hierarchy=all, molecule="ProteinG", residue_indexes=[(380, 565)]))  # A3-B1
-    add_distance_restraint12(S(hierarchy=all, molecule="Protein5", residue_indexes=[(0, 495)]), S(
-        hierarchy=all, molecule="Protein5", residue_indexes=[(495, 755)]))  # A3-B1
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinG", residue_indexes=range(0, 380)), S(
+        hierarchy=all, molecule="ProteinG", residue_indexes=range(380, 565)))  # A3-B1
+    add_distance_restraint12(S(hierarchy=all, molecule="Protein5", residue_indexes=range(0, 495)), S(
+        hierarchy=all, molecule="Protein5", residue_indexes=range(495, 755)))  # A3-B1
 
 # Inter-distance
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(0, 820)]), S(
-        hierarchy=all, molecule="Protein5", residue_indexes=[(0, 495)]))
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=range(0, 820)), S(
+        hierarchy=all, molecule="Protein5", residue_indexes=range(0, 495)))
 #    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(0 , 820 )]), S(hierarchy=all, molecule="Protein5", residue_indexes=[(495, 755)]))
 #    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(0 , 820 )]), S(hierarchy=all, molecule="ProteinI", residue_indexes=[(0, 510)]))
 
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(1065, 2075)]), S(
-        hierarchy=all, molecule="ProteinB", residue_indexes=[(0, 190)]))  # A3-B1
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(1065, 2075)]), S(
-        hierarchy=all, molecule="ProteinB", residue_indexes=[(820, 1485)]))  # A3-B3
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(1065, 2075)]), S(
-        hierarchy=all, molecule="ProteinB", residue_indexes=[(190, 820)]))  # A3-B2
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=range(1065, 2075)), S(
+        hierarchy=all, molecule="ProteinB", residue_indexes=range(0, 190)))  # A3-B1
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=range(1065, 2075)), S(
+        hierarchy=all, molecule="ProteinB", residue_indexes=range(820, 1485)))  # A3-B3
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=range(1065, 2075)), S(
+        hierarchy=all, molecule="ProteinB", residue_indexes=range(190, 820)))  # A3-B2
 
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(1065, 2075)]), S(
-        hierarchy=all, molecule="ProteinC", residue_indexes=[(0, 127)]))  # A3-C1
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(1065, 2075)]), S(
-        hierarchy=all, molecule="ProteinC", residue_indexes=[(837, 1172)]))  # A3-C3
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=range(1065, 2075)), S(
+        hierarchy=all, molecule="ProteinC", residue_indexes=range(0, 127)))  # A3-C1
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=range(1065, 2075)), S(
+        hierarchy=all, molecule="ProteinC", residue_indexes=range(837, 1172)))  # A3-C3
 # add_distance_restraint12(S(hierarchy=all, molecule="ProteinA",
 # residue_indexes=[(1065 , 2075 )]), S(hierarchy=all, molecule="ProteinG",
 # residue_indexes=[(380, 565)]))#A3-G2
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(1065, 2075)]), S(
-        hierarchy=all, molecule="ProteinI", residue_indexes=[(0, 510)]))  # A3-i
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(1065, 2075)]), S(
-        hierarchy=all, molecule="Protein5", residue_indexes=[(495, 755)]))  # A3-52
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(1065, 2075)]), S(
-        hierarchy=all, molecule="Protein5", residue_indexes=[(0, 495)]))  # A3-52
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=range(1065, 2075)), S(
+        hierarchy=all, molecule="ProteinI", residue_indexes=range(0, 510)))  # A3-i
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=range(1065, 2075)), S(
+        hierarchy=all, molecule="Protein5", residue_indexes=range(495, 755)))  # A3-52
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=range(1065, 2075)), S(
+        hierarchy=all, molecule="Protein5", residue_indexes=range(0, 495)))  # A3-52
 
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=[(0, 190)]), S(
-        hierarchy=all, molecule="Protein5", residue_indexes=[(0, 495)]))
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=[(0, 190)]), S(
-        hierarchy=all, molecule="Protein5", residue_indexes=[(495, 755)]))
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=range(0, 190)), S(
+        hierarchy=all, molecule="Protein5", residue_indexes=range(0, 495)))
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=range(0, 190)), S(
+        hierarchy=all, molecule="Protein5", residue_indexes=range(495, 755)))
 
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=[(820, 1485)]), S(
-        hierarchy=all, molecule="ProteinC", residue_indexes=[(0, 127)]))
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=[(820, 1485)]), S(
-        hierarchy=all, molecule="Protein5", residue_indexes=[(495, 755)]))
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=range(820, 1485)), S(
+        hierarchy=all, molecule="ProteinC", residue_indexes=range(0, 127)))
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinB", residue_indexes=range(820, 1485)), S(
+        hierarchy=all, molecule="Protein5", residue_indexes=range(495, 755)))
 
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinC", residue_indexes=[(0, 127)]), S(
-        hierarchy=all, molecule="Protein5", residue_indexes=[(0, 495)]))
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinC", residue_indexes=range(0, 127)), S(
+        hierarchy=all, molecule="Protein5", residue_indexes=range(0, 495)))
 #    add_distance_restraint12(S(hierarchy=all, molecule="ProteinC", residue_indexes=[(0 , 127)]), S(hierarchy=all, molecule="ProteinI", residue_indexes=[(0, 510)]))
 #    add_distance_restraint12(S(hierarchy=all, molecule="ProteinC", residue_indexes=[(127, 837)]), S(hierarchy=all, molecule="ProteinG", residue_indexes=[(380, 565)]))
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinC", residue_indexes=[(837, 1172)]), S(
-        hierarchy=all, molecule="Protein5", residue_indexes=[(495, 755)]))
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinC", residue_indexes=range(837, 1172)), S(
+        hierarchy=all, molecule="Protein5", residue_indexes=range(495, 755)))
 
 #    add_distance_restraint12(S(hierarchy=all, molecule="ProteinA", residue_indexes=[(820, 1065)]), S(hierarchy=all, molecule="ProteinG", residue_indexes=[(0, 380)]))
-    add_distance_restraint12(S(hierarchy=all, molecule="ProteinG", residue_indexes=[(0, 380)]), S(
-        hierarchy=all, molecule="ProteinI", residue_indexes=[(0, 510)]))
+    add_distance_restraint12(S(hierarchy=all, molecule="ProteinG", residue_indexes=range(0, 380)), S(
+        hierarchy=all, molecule="ProteinI", residue_indexes=range(0, 510)))
 #    add_distance_restraint12(S(hierarchy=all, molecule="ProteinI", residue_indexes=[(0, 510)]), S(hierarchy=all, molecule="Protein5", residue_indexes=[(0, 495)]))
 
 
