@@ -9,6 +9,7 @@
 # It counts the number of atoms within the pdb file
 
 import re
+import os
 
 #Ns = raw_input("enter number of spheres: ")
 #Nsphs = str(Ns)
