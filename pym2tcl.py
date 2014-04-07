@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import re
+import os
 # Select input file.
 #InputFileName = raw_input('choose pym file to open: ')
 
