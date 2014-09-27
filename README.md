@@ -1,5 +1,6 @@
 # eIF3
 
+Written by Argyris Politis, email:argyris.politis@kcl.ac.uk
 Data and scripts to model eIF3 from MS data.
 
 ## Steps
