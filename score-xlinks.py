@@ -1,6 +1,7 @@
 # code to implement the xlinking scoring for the proteasome module 1 (Rpn3/Rpn7/SEM1)
 #import wx
 
+from __future__ import print_function
 import re
 #import os, numarray
 import operator
@@ -198,7 +199,7 @@ for i in range(NA, NB):
 #       cK = getDistancesAs(ReadFile(InputFileName), posK1, posK2)
 #       cL = getDistancesAs(ReadFile(InputFileName), posL1, posL2)
 
-       print cA, cB#, cC
+       print(cA, cB)#, cC
 
        
 	#print c
@@ -221,7 +222,7 @@ for i in range(NA, NB):
 #+SD+SE+SF
 #+SG+SH+SI+SK+SL
        #print SF
-       print STot
+       print(STot)
        #print SO
                                                                     
        eSA = str(SA)
