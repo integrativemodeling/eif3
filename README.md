@@ -32,4 +32,5 @@ _Parallelizeable_: No
 
 _Publications_:
  - Keren Lasker, Javier A. Velazquez-Muriel, Benjamin M. Webb, Zheng Yang, Thomas E. Ferrin, Andrej Sali, [Macromolecular assembly structures by comparative modeling and electron microscopy](http://salilab.org/pdf/Lasker_MethodsMolBiol_2011.pdf), Methods in Molecular Biology, 2011.
- - Politis A, Stengel F, Hall Z, Hernandez H, Leitner A, Waltzhoeni T, Robinson CV, Aebersold R. A mass spectrometry-based hybrid method for structural modelling of protein complexes. Nature Methods, 11, 403-406, (2014) 
+ - Politis A, Stengel F, Hall Z, Hernandez H, Leitner A, Waltzhoeni T, Robinson CV, Aebersold R. [A mass spectrometry-based hybrid method for structural modelling of protein complexes](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3972104/), Nature Methods, 11, 403-406, (2014) 
+ - A. Politis, C. Schmidt, E. Tjioe, A. Sandercock, K. Lasker, Y. Gordiyenko, D. Russel, A. Sali, C. Robinson. [Topological models of heteromeric protein assemblies from mass spectrometry: Application to the yeast eIF3:eIF5 complex](http://salilab.org/pdf/Politis_ChemBiol_2015.pdf), Chem Biol 22, 117-128, 2015.
