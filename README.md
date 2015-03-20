@@ -1,7 +1,3 @@
-# eIF3
-
-Written by Argyris Politis, email:argyris.politis@kcl.ac.uk
-
 Data and scripts to model eIF3 from MS data.
 
 ## Steps
@@ -14,7 +10,7 @@ The `.pym` files can be converted to `.tcl` files by running the `pym2tcl.py` sc
 
 ## Info
 
-_Author(s)_: Argyris Politis
+_Author(s)_: Argyris Politis, email:argyris.politis@kcl.ac.uk
 
 _Version_: 1.0
 
