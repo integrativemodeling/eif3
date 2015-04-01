@@ -1,3 +1,6 @@
 title: eIF3 Modeling
 tags: [native mass spec, chemical crosslinks]
 pmid: 25544043
+test:
+    runtime: 10h
+    build: debug
