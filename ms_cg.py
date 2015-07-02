@@ -29,6 +29,7 @@ bb = IMP.algebra.BoundingBox3D(IMP.algebra.Vector3D(0, 0, 0),
 # proteins
 def create_representation():
     m = IMP.Model()
+    rs = IMP.RestraintSet(m, "all restraints")
     all = IMP.atom.Hierarchy.setup_particle(IMP.Particle(m))
     all.set_name("the universe")
     # create a protein, represented as a set of connected balls of appropriate
@@ -47,7 +48,7 @@ def create_representation():
                                                     for c in h.get_children()],
                                                    k)
         if r:
-            m.add_restraint(r)
+            rs.add_restraint(r)
             # only allow the particles to penetrate or separate by 1 angstrom
             r.set_maximum_score(k)
 
@@ -60,11 +61,11 @@ def create_representation():
     create_protein("ProteinG", [0, 380, 565])
     create_protein("Protein5", [0, 495, 755])
 #    create_protein("ProteinSEM1", [0, 4, 123])
-    return (m, all)
+    return (m, rs, all)
 
 
-# create the needed restraints and add them to the model
-def create_restraints(m, all):
+# create the needed restraints and add them to the restraint set
+def create_restraints(m, rs, all):
     def add_connectivity_restraint(s):
         tr = IMP.core.TableRefiner()
         rps = []
@@ -105,116 +106,116 @@ def create_restraints(m, all):
 # n17 = r.add_composite([iF, iG], n1) # this connectivity is below 20ID as
 # denoted by the experimental data
 
-        m.add_restraint(r)
+        rs.add_restraint(r)
         r.set_maximum_score(k)
 
     def add_distance_restraint1(s0, s1):
         d1 = -11.9
         r = IMP.atom.create_distance_restraint(s0, s1, d1, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint2(s0, s1):
         d2 = -11.8
         r = IMP.atom.create_distance_restraint(s0, s1, d2, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint3(s0, s1):
         d3 = -8.0
         r = IMP.atom.create_distance_restraint(s0, s1, d3, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint4(s0, s1):
         d4 = -11.3
         r = IMP.atom.create_distance_restraint(s0, s1, d4, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint5(s0, s1):
         d5 = -6.2
         r = IMP.atom.create_distance_restraint(s0, s1, d5, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint6(s0, s1):
         d6 = -2.8
         r = IMP.atom.create_distance_restraint(s0, s1, d6, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint7(s0, s1):
         d7 = 0.0
         r = IMP.atom.create_distance_restraint(s0, s1, d7, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint8(s0, s1):
         d8 = -10.4
         r = IMP.atom.create_distance_restraint(s0, s1, d8, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint9(s0, s1):
         d9 = -11.8
         r = IMP.atom.create_distance_restraint(s0, s1, d9, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint10(s0, s1):
         d10 = -0.4
         r = IMP.atom.create_distance_restraint(s0, s1, d10, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint11(s0, s1):
         d11 = -1.1
         r = IMP.atom.create_distance_restraint(s0, s1, d11, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint12(s0, s1):
         d12 = -6.7
         r = IMP.atom.create_distance_restraint(s0, s1, d12, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint13(s0, s1):
         d13 = -1.1
         r = IMP.atom.create_distance_restraint(s0, s1, d13, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
         r.set_maximum_score(4 * k)
 
     def add_distance_restraint14(s0, s1):
         d14 = 0.0
         r = IMP.atom.create_distance_restraint(s0, s1, d14, k)
-        m.add_restraint(r)
+        rs.add_restraint(r)
         # only allow the particles to separate by one angstrom
 
 #    def add_distance_restraint15(s0, s1):
 #        d15=58.0
 #        r=IMP.atom.create_distance_restraint(s0,s1, d15, k)
-#        m.add_restraint(r)
+#        rs.add_restraint(r)
 # only allow the particles to separate by one angstrom
 #        r.set_maximum_score(2*k)
 #        r.set_maximum_score(2*k)
 
     evr = IMP.atom.create_excluded_volume_restraint([all])
-    m.add_restraint(evr)
+    rs.add_restraint(evr)
     # a Selection allows for natural specification of what the restraints act on
 #    sE2=S(hierarchy=all, molecule="ProteinRpn11CG1")
     S = IMP.atom.Selection
@@ -300,8 +301,9 @@ def create_restraints(m, all):
 
 
 # find acceptable conformations of the model
-def get_conformations(m):
+def get_conformations(m, sf):
     sampler = IMP.core.MCCGSampler(m)
+    sampler.set_scoring_function(sf)
     sampler.set_bounding_box(bb)
     # magic numbers, experiment with them and make them large enough for
     # things to work
@@ -333,10 +335,10 @@ def get_conformations(m):
 
 
 # now do the actual work
-(m, all) = create_representation()
+(m, rs, all) = create_representation()
 IMP.atom.show_molecular_hierarchy(all)
-create_restraints(m, all)
-
+create_restraints(m, rs, all)
+sf = IMP.core.RestraintsScoringFunction([rs])
 
 # in order to display the results, we need something that maps the particles onto
 # geometric objets. The IMP.display.Geometry objects do this mapping.
@@ -350,7 +352,7 @@ for i in range(all.get_number_of_children()):
     g.set_color(color)
     gs.append(g)
 
-cs = get_conformations(m)
+cs = get_conformations(m, sf)
 # print cs
 
 # Report solutions
@@ -359,13 +361,13 @@ print("found", cs.get_number_of_configurations(), "solutions")
 for i in range(0, cs.get_number_of_configurations()):
     cs.load_configuration(i)
     # print the configuration
-    print("solution number: ", i, "scored :", m.evaluate(False))
+    print("solution number: ", i, "scored :", sf.evaluate(False))
 ListScores = []
 for i in range(0, cs.get_number_of_configurations()):
     cs.load_configuration(i)
     # print the configuration
-    print("solution number: ", i, "scored :", m.evaluate(False))
-    ListScores.append(m.evaluate(False))
+    print("solution number: ", i, "scored :", sf.evaluate(False))
+    ListScores.append(sf.evaluate(False))
     print(ListScores)
 
 f1 = open("out_scores_eif3-cor2.txt", "w")
@@ -381,4 +383,4 @@ for i in range(0, cs.get_number_of_configurations()):
 # Report solutions
 
 #analyze_conformations(cs, all, gs)
-# print m.evaluate(False)
+# print sf.evaluate(False)
