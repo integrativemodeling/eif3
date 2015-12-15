@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 # This code uses connectivity restraints and was written by A Politis,
 # Oxford university

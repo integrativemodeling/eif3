@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 # This code converts the pdb file (single file) into mfj file
 # the total number of Atom lines is initially extracted
