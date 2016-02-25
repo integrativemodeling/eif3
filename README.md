@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/20506/integrativemodeling/eif3.svg)](https://zenodo.org/badge/latestdoi/20506/integrativemodeling/eif3)
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.46478.svg)](http://dx.doi.org/10.5281/zenodo.46478)
 
 Data and scripts to model eIF3 from MS data.
 
